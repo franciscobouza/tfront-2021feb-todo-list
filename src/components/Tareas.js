@@ -1,11 +1,11 @@
 import React from 'react';
 import Tarea from './Tarea';
 
-const Tareas = ({ tareas }) => {
+const Tareas = ({ tareas, realizarTarea }) => {
   return (
     <div>
       {tareas.map((tarea, index) => (
-        <Tarea key={index} texto={tarea} />
+        <Tarea key={index} tarea={tarea} realizarTarea={realizarTarea} />
       ))}
     </div>
   );
