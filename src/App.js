@@ -1,4 +1,7 @@
 import Contenido from './components/Contenido';
+import Login from './components/Login';
+import PageNotFound from './components/PageNotFound';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -7,7 +10,11 @@ function App() {
       <header className="App-header">
         <h2>ToDo List</h2>
       </header>
-      <Contenido />
+      <Switch>
+        <Route path="/tareas" component={Contenido} />
+        <Route path="/login" component={Login} />
+        <Route component={PageNotFound} />
+      </Switch>
     </div>
   );
 }
