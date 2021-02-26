@@ -11,8 +11,8 @@ function App() {
         <h2>ToDo List</h2>
       </header>
       <Switch>
-        <Route path="/tareas" component={Contenido} />
-        <Route path="/login" component={Login} />
+        <Route path="/" component={Login} exact />
+        <Route path="/tareas" component={Contenido} exact />
         <Route component={PageNotFound} />
       </Switch>
     </div>
